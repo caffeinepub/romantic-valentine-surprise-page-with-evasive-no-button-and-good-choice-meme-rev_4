@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 20,
+  "summary": "ICP starter app with Motoko backend canister and React/Vite/Tailwind frontend scaffold, including Internet Identity auth hooks, shadcn/ui component library integration, build/deploy template tooling, and a Valentine proposal page experience (Yes/No with evasive No button, confetti, and a cat-kissing meme shown on Yes saying “Yay Ginjo will be so happy ❤️”).",
+  "architectural_notes": [
+    "Project uses ICP canister architecture: Motoko backend + React/Vite frontend with generated Candid bindings for actor calls.",
+    "Authentication is handled via Internet Identity on the frontend, with a dedicated actor hook for authenticated backend interaction.",
+    "UI layer is based on Tailwind CSS and shadcn/ui component primitives.",
+    "Repository includes a reusable build/deploy template (Docker + workspace tooling + scripts) for consistent packaging and deployment.",
+    "Frontend includes shared data/query helper modules (e.g., useQueries) and a StorageClient utility for consistent client-side persistence/data access.",
+    "Frontend linting includes custom ESLint rules to enforce project-specific constraints (e.g., no BigInt in query keys; require Internet Identity provider usage patterns)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "generatedImages": [
+    {
+      "filename": "frontend/public/assets/generated/valentine-meme-good-choice.dim_1200x1200.png",
+      "description": "Generated image asset placed in public assets for use by the frontend.",
+      "targetWidth": 1200,
+      "targetHeight": 1200
+    }
+  ],
+  "existing_features": [
+    {
+      "id": "IF-1",
+      "title": "Motoko backend canister scaffold",
+      "synonyms": [
+        "IC backend",
+        "Motoko canister"
+      ],
+      "description": "Backend canister code and Candid interface scaffolded for ICP deployment (Motoko core + did bindings).",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-2",
+      "title": "React + Vite + Tailwind frontend scaffold",
+      "synonyms": [
+        "Vite frontend",
+        "Tailwind UI"
+      ],
+      "description": "Frontend application scaffold with Vite, React, Tailwind CSS, app entrypoints, and configuration.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-3",
+      "title": "Internet Identity authentication integration (frontend hooks)",
+      "synonyms": [
+        "II auth",
+        "Internet Identity"
+      ],
+      "description": "Frontend hooks/utilities for connecting to Internet Identity and creating an authenticated actor for backend calls.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-4",
+      "title": "shadcn/ui component library integrated",
+      "synonyms": [
+        "shadcn components",
+        "UI component set"
+      ],
+      "description": "A large set of shadcn/ui components added to the frontend for rapid UI development.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-5",
+      "title": "Build template and deployment tooling",
+      "synonyms": [
+        "build-template",
+        "deploy scripts",
+        "Docker build"
+      ],
+      "description": "Build template including Dockerfile, scripts (image resize/prune), workspace configs, and ICP deployment configuration files.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-6",
+      "title": "Generated static asset included",
+      "synonyms": [
+        "generated image asset"
+      ],
+      "description": "A generated image asset added to the frontend public assets directory.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-7",
+      "title": "Frontend query utilities and data-access helpers",
+      "synonyms": [
+        "useQueries hook",
+        "StorageClient",
+        "query key lint rules"
+      ],
+      "description": "Adds frontend data-access helpers including a shared query hook module (useQueries) and a StorageClient utility, along with custom ESLint rules to enforce safe query key usage (e.g., avoid BigInt in query keys) and require an Internet Identity provider where needed.",
+      "reqIds": [],
+      "version": 1
+    },
+    {
+      "id": "IF-8",
+      "title": "Valentine proposal page UI/interaction flow",
+      "synonyms": [
+        "Valentine page",
+        "proposal page",
+        "Yes/No with evasive No",
+        "confetti + Good choice image"
+      ],
+      "description": "Implements a simple romantic-themed page asking “Athira K M” to be my Valentine, with Yes (heart) and No (broken heart) options; No button evasively moves away on hover (up to 100 times); clicking Yes triggers confetti and displays the “Good choice ❤️” image asset.",
+      "reqIds": [
+        "AR-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-post-acceptance-after-clicking-yes-experience-to-display-the-message-yay-ginjo-will-be-so-happy-alongside-the-existing-cute-cats-kissing-meme-image",
+      "title": "Update the post-acceptance (after clicking “Yes ❤️”) experience to display the message: “Yay Ginjo will be so happy ❤️” alongside the existing cute cats-kissing meme image.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-main-proposal-view-asks-exactly-athira-k-m-will-you-be-my-valentine-and-shows-the-two-options-yes-and-no",
+      "title": "Ensure the main proposal view asks exactly: “Athira K M, will you be my Valentine?” and shows the two options “Yes ❤️” and “No 💔”.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-preserve-and-verify-the-evasive-behavior-hovering-or-pointer-interaction-over-no-moves-it-away-allowing-up-to-100-evasions-so-it-is-effectively-not-clickable-until-the-evasion-limit-is-reached",
+      "title": "Preserve and verify the evasive behavior: hovering (or pointer interaction) over “No 💔” moves it away, allowing up to 100 evasions so it is effectively not clickable until the evasion limit is reached.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-confetti-transition-effect-that-plays-when-the-user-clicks-yes-before-or-as-the-accepted-view-is-revealed",
+      "title": "Add a confetti transition effect that plays when the user clicks “Yes ❤️” before (or as) the accepted view is revealed.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-post-acceptance-view-display-an-animated-image-gif-of-two-cats-kissing-and-the-message-exactly-yay-ginjo-will-be-so-happy",
+      "title": "In the post-acceptance view, display an animated image (GIF) of two cats kissing and the message exactly: “Yay Ginjo will be so happy ❤️”.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-valentine-page-uses-a-romantic-pink-and-white-visual-theme-consistently-across-both-the-proposal-view-and-the-post-acceptance-view",
+      "title": "Ensure the Valentine page uses a romantic pink-and-white visual theme consistently across both the proposal view and the post-acceptance view.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-animated-cats-kissing-gif-as-a-static-asset-under-frontend-public-assets-generated-and-reference-it-directly-from-the-frontend-do-not-serve-it-via-the-backend",
+      "title": "Add the new animated cats-kissing GIF as a static asset under frontend/public/assets/generated and reference it directly from the frontend (do not serve it via the backend).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-subtle-delightful-animation-to-the-yes-button-on-the-main-valentine-proposal-view-to-make-it-feel-more-special-when-the-user-interacts-with-it-hover-and-or-click-without-changing-any-existing-text-or-the-overall-valentine-flow-confetti-accepted-view-and-evasive-no-behavior-must-remain-unchanged",
+      "title": "Add a subtle, delightful animation to the “Yes ❤️” button on the main Valentine proposal view to make it feel more special when the user interacts with it (hover and/or click), without changing any existing text or the overall Valentine flow (confetti, accepted view, and evasive “No 💔” behavior must remain unchanged).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Update the Valentine page post-Yes experience to show a cute meme of 2 cats kissing with the text “Yay Ginjo will be so happy ❤️”.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Provide a standalone romantic Valentine page implementation using plain HTML/CSS/JavaScript (pink/white theme), with Yes/No, evasive No on hover, confetti on Yes, and a 2-cats-kissing GIF plus the message “Yay Ginjo will be so happy ❤️”.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a small animation to the “Yes ❤️” button to make the interaction feel sweeter (e.g., subtle pulse/bounce/scale on hover/click).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Update Valentine surprise page to show the requested post-Yes message and meme",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

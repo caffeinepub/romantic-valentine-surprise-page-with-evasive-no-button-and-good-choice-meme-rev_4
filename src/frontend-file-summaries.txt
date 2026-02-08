@@ -1,0 +1,7 @@
+{
+  "frontend/src/App.tsx": "Single-page Valentine's Day surprise component that asks \"Athira K M, will you be my Valentine?\" with an evasive \"No 💔\" button that moves away on hover/touch, and an animated \"Yes ❤️\" button (with heartbeat pulse and glow effects) that triggers confetti and reveals an animated cats-kissing GIF with the message \"Yay Ginjo will be so happy ❤️\".",
+  "frontend/src/index.css": "Global styles with romantic rose/pink OKLCH color palette for both light and dark modes, featuring warm tones (hue ~15), custom playful animations (wiggle-bounce and elastic movement) for the interactive \"No\" button, confetti falling animation, and new subtle heartbeat pulse and glow animations for the \"Yes ❤️\" button on hover/click.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Inter font family and romantic color tokens mapped from the OKLCH design system.",
+  "frontend/src/hooks/useQueries.ts": "Empty file as no backend queries are required for this frontend-only Valentine's surprise page.",
+  "frontend/src/components/ConfettiOverlay.tsx": "Confetti overlay component that renders 80 animated confetti pieces in romantic pink/rose colors falling from top to bottom with random delays, durations, and rotations, using pointer-events-none to avoid blocking user interaction."
+}

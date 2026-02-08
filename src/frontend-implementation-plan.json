@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Subtle interaction animation for the “Yes ❤️” button",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "summary": "Add a subtle hover/press animation to the “Yes ❤️” button on the Valentine proposal view while preserving the existing flow (confetti, accepted view, and evasive “No 💔”).",
+      "acceptanceCriteria": [
+        "On the proposal screen, the “Yes ❤️” button shows a noticeable but subtle animation on user interaction (hover and/or click).",
+        "Clicking “Yes ❤️” still triggers the confetti effect and transitions to the accepted view exactly as before.",
+        "The “No 💔” button evasive behavior (including up to 100 evasions) is unchanged.",
+        "No user-facing text strings are changed."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add new CSS keyframes and utility classes dedicated to the “Yes ❤️” button interaction (hover + active/press), keeping animations subtle (e.g., gentle pulse/pop + soft glow) and scoped so they do not affect the “No 💔” button, confetti, or accepted view styles."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply the new “Yes ❤️” animation classes to the existing “Yes ❤️” button (keeping the current onClick handler and all text unchanged). Continue using the shadcn-ui Button component for the button element; Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

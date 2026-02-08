@@ -1,0 +1,48 @@
+{
+  "kind": "build_request",
+  "title": "Add a small animation to the “Yes ❤️” button",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "text": "Add a subtle, delightful animation to the “Yes ❤️” button on the main Valentine proposal view to make it feel more special when the user interacts with it (hover and/or click), without changing any existing text or the overall Valentine flow (confetti, accepted view, and evasive “No 💔” behavior must remain unchanged).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "yes add a little animation to the yes button"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the proposal screen, the “Yes ❤️” button shows a noticeable but subtle animation on user interaction (hover and/or click).",
+        "Clicking “Yes ❤️” still triggers the confetti effect and transitions to the accepted view exactly as before.",
+        "The “No 💔” button evasive behavior (including up to 100 evasions) is unchanged.",
+        "No user-facing text strings are changed."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit any frontend files under immutable paths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui).",
+    "Keep backend as-is; this change must be frontend-only."
+  ],
+  "nonGoals": [
+    "Adding new pages, routes, or new interaction steps beyond the existing Valentine proposal flow.",
+    "Changing the accepted view content, confetti behavior, or the evasive “No 💔” mechanics."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

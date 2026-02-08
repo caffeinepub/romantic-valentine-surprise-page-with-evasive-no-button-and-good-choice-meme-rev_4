@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Feature evidence report linking the animation feature to App.tsx and index.css with metadata.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing key frontend files and their roles in the Valentine app.",
+  "frontend/index.css": "Tailwind base theme defining extensive OKLCH color variables for light and dark modes.",
+  "frontend/index.html": "Basic HTML page mounting the React app with a root div and script entrypoint.",
+  "frontend/src/App.tsx": "Main Valentine interaction view handling Yes/No button behavior, evasive No movement, confetti, and acceptance reveal.",
+  "frontend/src/components/ConfettiOverlay.tsx": "Generates and animates 80 falling confetti pieces with randomized properties.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor using react-query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity auth provider and hook managing identity state, login, logout, and persistence.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file exporting nothing.",
+  "frontend/src/index.css": "Global styles, theme variables, and playful animations including wiggle and bounce effects for buttons.",
+  "frontend/src/main.tsx": "React entrypoint setting up QueryClient and InternetIdentityProvider before rendering App.",
+  "frontend/tailwind.config.js": "Tailwind config defining theme extensions, custom colors, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Metadata describing the project’s architecture, features, assets, and versioned state for an ICP app with Motoko backend and React/Tailwind frontend."
+}
